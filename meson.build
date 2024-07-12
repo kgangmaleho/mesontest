@@ -3,7 +3,8 @@ project('mesontest', 'cpp',
   default_options : ['warning_level=3', 'cpp_std=c++14'])
 
 sdl2lib = dependency('sdl2')
+fmtlib = dependency('fmt')
 
 executable('mesontest',
            'mesontest.cpp',
-           dependencies : sdl2lib)
+           dependencies : [sdl2lib, fmtlib])
